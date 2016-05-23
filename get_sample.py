@@ -28,7 +28,7 @@ class Classifier():
         self.click = self.click[:, indices]
         
     def transform(self):
-        
+        print "Transforming data: %s" %(time.strftime(ISOTIMEFORMAT, time.localtime()))
         s = set()
         for c in range(len(indices)):
             tmp = [str(c)+'#'+x for x in self.click[:, c]]
